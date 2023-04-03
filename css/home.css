@@ -1296,6 +1296,9 @@ body::-webkit-scrollbar {
   #reservation-section .form-container .box-container {
     grid-template-columns: repeat(1, 1fr);
   }
+  #reservation-section .form-container .box-container input {
+    width: 100% !important;
+  }
 }
 #newsletter-section {
   background: url("../images/newsletter-bg.jpg") center/cover fixed;

@@ -19,7 +19,9 @@
     #reservation-section .form-container {
         & .box-container {
             grid-template-columns: repeat(1, 1fr);
-
+            & input{
+                width: 100% !important;
+            }
         }
     }
 }
