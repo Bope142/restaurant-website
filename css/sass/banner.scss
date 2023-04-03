@@ -1,0 +1,87 @@
+#banner-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px;
+  background: url("../images/bg-page (1).jpg") center/cover fixed;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  &::after{
+    content:"";
+    background: linear-gradient(to bottom,rgba($Neutral-5,0.7),rgba(0,0,0,0.98));
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+#banner-section .text-section{
+  display: flex;
+  flex-direction: column;
+  z-index:5;
+  & .text-1{
+    font-family: $FontBold;
+    color: white;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 2px rgba($Neutral-4,0.9);
+    & span{
+      color: $Neutral-1;
+    }
+  }
+  & .text-2{
+    font-family: $FontBold;
+    color: white;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+     text-shadow: 2px 2px 2px rgba($Neutral-4,0.9);
+    & .clr-1-text{
+      color: $Neutral-3 !important;
+    }
+    & .clr-2-text{
+      color: $Neutral-2 !important;
+    }
+  }
+  & .details{
+    margin-top: 25px;
+    text-align: justify;
+    font-family: $FontRegular;
+    font-size: 1.3rem;
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 25px;
+  }
+  & .btn{
+    align-self: flex-start;
+  }
+}
+
+#banner-section .illustration-section {
+  z-index:5;
+  display: flex;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+ transform: translateX(10%) rotate(25deg);
+  & .img-illustration-banner{
+    display: flex;
+    overflow: hidden;
+    padding: 5px;
+    background: white;
+    border-radius: 0.4rem;
+    height: 200px;
+    width: 200px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover{
+      transform: rotate(-8deg);
+    }
+    & img{
+      align-self: stretch;
+      object-fit: cover;
+    }
+  }
+}

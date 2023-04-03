@@ -1,0 +1,85 @@
+#testimonials-section .section_content{
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 25px;
+  overflow: hidden;
+}
+
+
+.content__testimonials{
+  overflow-y:hidden ;
+  overflow-x: scroll;
+  display: flex;
+  column-gap: 35px;
+  padding: 25px;
+   -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.content__testimonials::-webkit-scrollbar {
+    display: none;
+}
+.testimonial{
+  flex: none;
+  position: relative;
+  display: flex;
+  & .testimonial__user{
+    background: $Neutral-1;
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   // height: 200px;
+    & .user__cover{
+      flex: none;
+      height: 130px;
+      width:130px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      & img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    & .user__name{
+      font-family: $FontMedium;
+      color: white;
+      font-size: 1.3rem;
+      align-self: start;
+    }
+    & .text{
+      font-family: $FontLight;
+      color: white;
+      font-size: 0.9rem;
+      align-self: start;
+    }
+  }
+  & .testimonial__overview{
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    background: white;
+    flex-direction: column;
+    grid-row-gap: 25px;
+    width: 300px;
+    align-self: center;
+    transform: translateX(-20%);
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    & .rating__user{
+      overflow: hidden;
+      display: flex;
+      column-gap: 5px;
+      & svg{
+        height: 1.3rem;
+        width: 1.3rem;
+        flex: none;
+        & *{
+          fill:yellow;
+        }
+      }
+    }
+  }
+}

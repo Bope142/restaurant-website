@@ -1,0 +1,111 @@
+#service-section .section_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+
+.service {
+    padding: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 25px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    &::after {
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: url("../images/bg-page (1).jpg") center/cover fixed;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transition: all 0.3s linear;
+        height: 0;
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        z-index: 5;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba($Neutral-5, 0.2), rgba(0, 0, 0, 0.98));
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transition: all 0.3s linear;
+        height: 0;
+    }
+
+    &:hover {
+        & * {
+            color: white !important;
+            fill: white !important;
+            border-color: white !important;
+            opacity: 1.0 !important;
+        }
+        & .btn{
+          transform: translateX(10%);
+        }
+
+        &::after {
+            height: 100%;
+        }
+
+        &::before {
+            height: 100%;
+        }
+
+    }
+
+    & .service__icons {
+        flex: none;
+        padding: 20px;
+        border: 3px solid $Neutral-1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: start;
+        z-index: 50;
+        transition: all 0.3s linear;
+
+        & svg {
+            height: 3rem;
+            width: 3rem;
+            transition: all 0.3s linear;
+
+            & * {
+                fill: $Neutral-1;
+                transition: all 0.3s linear;
+            }
+        }
+    }
+
+    & .service__name {
+        font-family: $FontMedium;
+        color: $Neutral-4;
+        font-size: 1.5rem;
+        text-align: left;
+        z-index: 50;
+        transition: all 0.3s linear;
+    }
+
+    & .service__details {
+        text-align: left;
+        font-family: $FontRegular;
+        font-size: 1rem;
+        color: $Neutral-5;
+        opacity: 0.5;
+        z-index: 50;
+        transition: all 0.3s linear;
+    }
+
+    & .btn {
+        align-self: start;
+        z-index: 50;
+        transition: all 0.3s linear;
+    }
+}

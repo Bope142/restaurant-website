@@ -1,0 +1,91 @@
+.container__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 500;
+    transition: all 0.3s linear;
+
+    & #booking-btn {
+        margin-right: $PADDING;
+    }
+}
+
+.header-bg-visible {
+    background: rgba(255, 255, 255, 1.0) !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    & .header__logo {
+        & svg .path-1 {
+            fill: $Neutral-4 !important;
+        }
+
+        & .name-website {
+            color: $Neutral-4 !important;
+
+        }
+    }
+
+    & .header__nav {
+
+        & .nav__link {
+            color: $Neutral-4 !important;
+        }
+        & .nav__link-active {
+        color: $Neutral-1 !important;
+    }
+    }
+
+}
+
+.header__logo {
+    margin-left: $PADDING;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    flex: none;
+
+    & svg {
+        height: 3rem;
+        width: 3rem;
+        flex: none;
+        align-self: center;
+
+        & .path-1 {
+            fill: white !important;
+        }
+    }
+
+    & .name-website {
+        font-family: $FontBold;
+        font-size: 1.4rem;
+        color: white;
+        align-self: center;
+
+        & span {
+            color: $Neutral-1;
+        }
+    }
+}
+
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    align-self: center;
+
+    & .nav__link {
+        align-self: center;
+        font-family: $FontRegular;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+    & .nav__link-active {
+        color: $Neutral-1 !important;
+    }
+
+}

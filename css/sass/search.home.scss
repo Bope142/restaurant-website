@@ -1,0 +1,14 @@
+#search-section .section_content {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 12px;
+  align-items: center;
+  justify-content: center;
+  & .box-search{
+    display: flex;
+    grid-gap:15px;
+    & .input-form{
+      width: 400px;
+    }
+  }
+}

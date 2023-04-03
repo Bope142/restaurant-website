@@ -1,0 +1,13 @@
+#reservation-section .form-container{
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 20px;
+  & .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+  }
+  & .btn{
+    align-self: center;
+  }
+}
