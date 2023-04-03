@@ -18,5 +18,6 @@ window.addEventListener( "load", ( ) => {
     } else {
         document.querySelector( ".container__header" ).classList.remove( "header-bg-visible" )
     }
-    mobileMenuEvent()
+    mobileMenuEvent();
+    document.querySelector('.loader-page').style.display ="none"
 } )
