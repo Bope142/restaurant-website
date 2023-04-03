@@ -85,3 +85,38 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 960px) {
+    #banner-section {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 105px;
+         padding-bottom: 100px;
+          padding-top: 150px;
+    }
+    #banner-section .illustration-section{
+       transform: translateX(0%) rotate(5deg);
+      & .img-illustration-banner{
+        height: 180px;
+        width: 180px;
+      }
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #banner-section {
+        grid-row-gap: 50px;
+         padding-bottom: 100px;
+    }
+    #banner-section .illustration-section{
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      & .img-illustration-banner{
+        height: auto;
+        width: auto;
+      }
+    }
+}
+

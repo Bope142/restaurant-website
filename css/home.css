@@ -289,6 +289,16 @@ body::-webkit-scrollbar {
   width: 100vw;
 }
 
+@media only screen and (max-width: 1200px) {
+  .container__section {
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .container__section {
+    padding: 50px 20px;
+  }
+}
 .container__header {
   display: flex;
   align-items: center;
@@ -363,6 +373,157 @@ body::-webkit-scrollbar {
   color: #F05922 !important;
 }
 
+.menu-mobile-btn {
+  --front: #F05922;
+  --back: #0C0C0C;
+  --icon: white;
+  perspective: 600px;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: none;
+}
+.menu-mobile-btn input {
+  display: none;
+}
+.menu-mobile-btn input + div span {
+  --rotateY: 0deg;
+  --background: var(--front);
+  transform: rotateY(var(--rotateY));
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--background);
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.2, 0.64, 0.48, 1.24);
+}
+.menu-mobile-btn input + div span:before, .menu-mobile-btn input + div span:after {
+  --rotate: 0deg;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  top: 50%;
+  left: 50%;
+  background: var(--icon);
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%) rotate(var(--rotate)) translateZ(6px);
+}
+.menu-mobile-btn input + div span:first-child {
+  --background: var(--back);
+}
+.menu-mobile-btn input + div span:first-child:before {
+  --rotate: -45deg;
+}
+.menu-mobile-btn input + div span:first-child:after {
+  --rotate: 45deg;
+}
+.menu-mobile-btn input + div span:last-child {
+  --rotateY: 180deg;
+}
+.menu-mobile-btn input + div span:last-child:before {
+  box-shadow: 0 -5px 0 var(--icon), 0 5px 0 var(--icon);
+}
+.menu-mobile-btn input + div span:last-child:after {
+  display: none;
+}
+.menu-mobile-btn input:checked + div span:first-child {
+  --rotateY: -180deg;
+}
+.menu-mobile-btn input:checked + div span:last-child {
+  --rotateY: 0deg;
+}
+
+.menu-mobile-active {
+  height: 540px !important;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+.menu-mobile {
+  position: fixed;
+  background: #0C0C0C;
+  z-index: 500;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+  transition: all 0.2s linear;
+  height: 0;
+  overflow: hidden;
+}
+.menu-mobile .nav__item-select {
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.2s linear;
+}
+.menu-mobile .nav__item-select::after {
+  background: #F05922 !important;
+  transition: all 0.2s linear;
+}
+.menu-mobile .btn {
+  align-self: flex-start !important;
+  margin: 20px;
+}
+.menu-mobile .nav__items {
+  padding: 20px;
+  font-family: "Oswald-Regular", sans-serif;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s linear;
+  position: relative;
+}
+.menu-mobile .nav__items::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0;
+  height: 100%;
+  background: transparent;
+  width: 5px;
+  transition: all 0.2s linear;
+}
+.menu-mobile .nav__items:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+@media only screen and (max-width: 1200px) {
+  .container__header #booking-btn {
+    margin-right: 50px !important;
+  }
+  .container__header .header__logo {
+    margin-left: 50px !important;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .container__header #booking-btn {
+    margin-right: 20px !important;
+  }
+  .container__header .header__logo {
+    margin-left: 20px !important;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .container__header #booking-btn {
+    display: none !important;
+  }
+  .container__header .header__nav {
+    display: none !important;
+  }
+  .container__header .menu-mobile-btn {
+    margin-right: 20px !important;
+    display: flex;
+  }
+}
 #banner-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -451,6 +612,38 @@ body::-webkit-scrollbar {
   object-fit: cover;
 }
 
+@media only screen and (max-width: 960px) {
+  #banner-section {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 105px;
+    padding-bottom: 100px;
+    padding-top: 150px;
+  }
+
+  #banner-section .illustration-section {
+    transform: translateX(0%) rotate(5deg);
+  }
+  #banner-section .illustration-section .img-illustration-banner {
+    height: 180px;
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  #banner-section {
+    grid-row-gap: 50px;
+    padding-bottom: 100px;
+  }
+
+  #banner-section .illustration-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #banner-section .illustration-section .img-illustration-banner {
+    height: auto;
+    width: auto;
+  }
+}
 #search-section .section_content {
   display: flex;
   flex-direction: column;
@@ -466,6 +659,26 @@ body::-webkit-scrollbar {
   width: 400px;
 }
 
+@media only screen and (max-width: 700px) {
+  #search-section .section_content .box-search .input-form {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #search-section .section_content .box-search {
+    flex-direction: column;
+  }
+  #search-section .section_content .box-search .input-form {
+    width: 300px;
+    flex: none;
+    align-self: stretch;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #search-section .section_content .box-search .input-form {
+    width: 230px;
+  }
+}
 #about-section .section_content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -511,6 +724,15 @@ body::-webkit-scrollbar {
   margin-top: 25px;
 }
 
+@media only screen and (max-width: 960px) {
+  #about-section .section_content {
+    display: flex;
+    flex-direction: column;
+  }
+  #about-section .section_content .about-text {
+    padding-left: 0;
+  }
+}
 #service-section .section_content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -608,6 +830,12 @@ body::-webkit-scrollbar {
   transition: all 0.3s linear;
 }
 
+@media only screen and (max-width: 960px) {
+  #service-section .section_content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #menu-section .section_content {
   display: flex;
   flex-direction: column;
@@ -676,6 +904,35 @@ body::-webkit-scrollbar {
   color: white;
 }
 
+@media only screen and (max-width: 960px) {
+  .menu__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .menu__list .menu .menu__cover {
+    order: 1;
+  }
+  .menu__list .menu .menu__details {
+    order: 5;
+  }
+}
+@media only screen and (max-width: 565px) {
+  .category-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .category-menu .menu-type {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .menu__list .menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 325px) {
+  .category-menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 #booking-section {
   background: url("../images/bg-page (3).jpg") center/cover fixed;
   position: relative;
@@ -756,6 +1013,27 @@ body::-webkit-scrollbar {
   object-fit: cover;
 }
 
+@media only screen and (max-width: 800px) {
+  #recipe-section .section_content {
+    transform: translateY(8%);
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px !important;
+  }
+  #recipe-section .section_content .box-details-recipe {
+    order: 8;
+    transform: translateX(0%) translateY(-30%);
+    width: auto;
+    align-self: center;
+    margin-left: 0;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  #recipe-section .section_content .cover-recipe-day {
+    width: 90%;
+    margin-left: 0;
+    order: 1;
+  }
+}
 #galery-section .section_content {
   display: flex;
   flex-direction: column;
@@ -770,6 +1048,11 @@ body::-webkit-scrollbar {
   align-self: center;
 }
 
+@media only screen and (max-width: 700px) {
+  #galery-section .section_content .content-galery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 #testimonials-section .section_content {
   display: flex;
   flex-direction: column;
@@ -867,7 +1150,6 @@ body::-webkit-scrollbar {
   flex-direction: column;
   grid-row-gap: 25px;
   align-items: center;
-  justify-content: center;
   z-index: 50;
 }
 #stats-section .stats .stat__count {
@@ -879,6 +1161,7 @@ body::-webkit-scrollbar {
   font-family: "Oswald-Medium", sans-serif;
   color: white;
   font-size: 2rem;
+  text-align: center;
 }
 #stats-section::after {
   content: "";
@@ -890,6 +1173,16 @@ body::-webkit-scrollbar {
   top: 0;
 }
 
+@media only screen and (max-width: 960px) {
+  #stats-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 550px) {
+  #stats-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 #blog-section .section_content {
   display: flex;
   flex-direction: column;
@@ -935,7 +1228,7 @@ body::-webkit-scrollbar {
   background: rgba(240, 89, 34, 0.7);
   font-family: "Oswald-Medium", sans-serif;
   color: white;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 .article .article__cover img {
   height: 100%;
@@ -986,6 +1279,11 @@ body::-webkit-scrollbar {
   align-self: center;
 }
 
+@media only screen and (max-width: 550px) {
+  #reservation-section .form-container .box-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 #newsletter-section {
   background: url("../images/newsletter-bg.jpg") center/cover fixed;
   display: flex;
@@ -1022,6 +1320,23 @@ body::-webkit-scrollbar {
   top: 0;
 }
 
+@media only screen and (max-width: 900px) {
+  #newsletter-section {
+    flex-direction: column;
+  }
+  #newsletter-section h3 {
+    text-align: center;
+  }
+  #newsletter-section form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #newsletter-section form {
+    flex-direction: column;
+    grid-row-gap: 20px;
+  }
+}
 .container__footer {
   background: #0C0C0C;
   display: flex;
@@ -1148,6 +1463,17 @@ body::-webkit-scrollbar {
   color: white;
   opacity: 0.7;
   padding-top: 25px;
+}
+
+@media only screen and (max-width: 960px) {
+  .footer__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footer__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

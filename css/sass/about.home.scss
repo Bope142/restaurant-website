@@ -48,3 +48,15 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 960px) {
+    #about-section .section_content {
+        display: flex;
+        flex-direction: column;
+
+        & .about-text {
+            padding-left: 0;
+        }
+    }
+}

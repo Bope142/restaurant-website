@@ -39,6 +39,7 @@ body::-webkit-scrollbar {
     position: relative;
     overflow: hidden;
     flex: none;
+
     &::after {
         content: "";
         position: absolute;
@@ -58,47 +59,49 @@ body::-webkit-scrollbar {
     }
 }
 
-.btn-round{
+.btn-round {
     border-radius: 1.9rem;
 }
 
-.container__section{
+.container__section {
     padding: 50px $PADDING;
 }
 
-.btn-icons{
+.btn-icons {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 25px;
-    & svg{
+
+    & svg {
         height: 1.2rem;
         width: 1.2rem;
         flex: none;
     }
 }
 
-.container__section{
+.container__section {
     display: flex;
     flex-direction: column;
     grid-row-gap: 50px;
-    & .setion__title_content{
-         display: flex;
-    flex-direction: column;
-    grid-row-gap: 10px;
-    align-items: center;
-    justify-content: center;
+
+    & .setion__title_content {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 10px;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-.section__tilte{
+.section__tilte {
     font-family: $FontBold;
     color: $Neutral-5;
     font-size: 2rem;
     text-align: center;
 }
 
-.detail_title_section{
+.detail_title_section {
     text-align: center;
     font-family: $FontRegular;
     font-size: 1.2rem;
@@ -107,13 +110,14 @@ body::-webkit-scrollbar {
 }
 
 
-.input-form{
+.input-form {
     border: 1px solid $Neutral-1;
     outline: none;
     padding: 15px;
     font-family: $FontRegular;
     font-size: 1.1rem;
     transition: all 0.3s linear;
+
     &:focus {
         color: $Neutral-5;
         outline: 0;
@@ -122,27 +126,28 @@ body::-webkit-scrollbar {
 }
 
 
-.title-second{
+.title-second {
     font-family: $FontMedium;
     font-size: 1.8rem;
     color: $Neutral-4;
 }
 
-.text-clr-orange{
+.text-clr-orange {
     color: $Neutral-1 !important;
 }
 
 
-.no-bg-btn{
+.no-bg-btn {
     border: 1px solid white;
 }
 
-.controll-slide{
+.controll-slide {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 15px;
-    & .btn-slide-controll{
+
+    & .btn-slide-controll {
         //overflow: hidden;
         padding: 8px 15px;
         flex: none;
@@ -153,22 +158,24 @@ body::-webkit-scrollbar {
         background: white;
         cursor: pointer;
         position: relative;
-        & svg{
+
+        & svg {
             height: 1.8rem;
             width: 1.8rem;
             flex: none;
-            & *{
-                fill:$Neutral-1;
+
+            & * {
+                fill: $Neutral-1;
             }
         }
     }
 }
 
-.right-slide{
-    &::before{
+.right-slide {
+    &::before {
         content: "";
         position: absolute;
-        top:50%;
+        top: 50%;
         right: 120%;
         transform: translateY(-50%);
         background: $Neutral-1;
@@ -177,11 +184,12 @@ body::-webkit-scrollbar {
 
     }
 }
-.left-slide{
-    &::after{
+
+.left-slide {
+    &::after {
         content: "";
         position: absolute;
-        top:50%;
+        top: 50%;
         left: 120%;
         transform: translateY(-50%);
         background: $Neutral-1;
@@ -189,4 +197,23 @@ body::-webkit-scrollbar {
         width: 100vw;
 
     }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    $PADDING: 50px;
+
+    .container__section {
+        padding: $PADDING;
+    }
+
+}
+@media only screen and (max-width: 1100px) {
+    $PADDING: 20px;
+
+    .container__section {
+        padding: 50px $PADDING;
+    }
+
 }

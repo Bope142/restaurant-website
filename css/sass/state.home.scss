@@ -9,7 +9,6 @@
     flex-direction: column;
     grid-row-gap: 25px;
     align-items: center;
-    justify-content: center;
     z-index:50;
     & .stat__count{
       font-family: $FontBold;
@@ -20,6 +19,7 @@
       font-family: $FontMedium;
       color: white;
       font-size: 2rem;
+      text-align: center;
     }
   }
    &::after{
@@ -31,4 +31,16 @@
     left: 0;
     top: 0;
   }
+}
+
+@media only screen and (max-width: 960px) {
+    #stats-section {
+          grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #stats-section {
+          grid-template-columns: repeat(1, 1fr);
+    }
 }
