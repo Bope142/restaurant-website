@@ -1,0 +1,136 @@
+@import './main.scss';
+@import './header.scss';
+@import './reservation.home.scss';
+@import './footer.scss';
+
+#banner-section {
+    background: url("../images/bg-page (1).jpg") center/cover fixed;
+}
+
+.roman {
+    font-family: Georgia, serif;
+    font-size: 24px;
+     font-style: italic;
+    font-weight: 300;
+    line-height: 1.2;
+    position: relative;
+    text-align: justify;
+}
+
+.roman:first-letter {
+    font-size: 7rem;
+    font-weight: bold;
+    float: left;
+    margin: 0.2em 0 0 0;
+    padding-right: 5px;
+    position: relative;
+     color: $Neutral-1;
+}
+
+#discount-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .discount {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        overflow: hidden;
+        padding: 10px;
+        align-self: center;
+        width: 50%;
+
+        & .content {
+            border: 3px solid $Neutral-1;
+            padding: 10px;
+
+        }
+    }
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 25px;
+
+    & .title {
+        text-align: center;
+        color: $Neutral-1;
+        font-family: $FontBold;
+        font-size: 1.8rem;
+    }
+}
+
+.content__price {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 10px;
+
+    & .price {
+        display: flex;
+        grid-gap: 25px;
+        align-items: center;
+
+        & .number__price {
+            flex: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba($Neutral-1, 0.4);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            font-family: $FontMedium;
+            color: $Neutral-1;
+            font-size: 1.3rem;
+        }
+
+        & .food__title {
+            font-family: $FontMedium;
+            font-size: 1.3rem;
+            color: $Neutral-5;
+
+            & span {
+                color: $Neutral-1 !important;
+            }
+        }
+    }
+}
+
+
+.content__message {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    & .msg-qt {
+        color: $Neutral-1;
+        font-family: $FontBold;
+        font-size: 4rem;
+    }
+
+    & .msg-detail {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 5px;
+        justify-content: center;
+        font-family: $FontBold;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+   #discount-section {
+    & .discount{
+      width: 80%;
+    }
+    }
+}
+@media only screen and (max-width: 600px) {
+   #discount-section {
+    & .discount{
+      width: auto;
+    }
+    }
+}
