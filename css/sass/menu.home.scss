@@ -1,0 +1,114 @@
+#menu-section .section_content {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 25px;
+}
+
+
+.category-menu {
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & .menu-type {
+        padding: 10px 35px;
+        border: 1px solid $Neutral-1;
+        font-family: $FontMedium;
+        font-size: 1.2rem;
+        color: $Neutral-1;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        background: white;
+    }
+
+    & .menu-select {
+        color: white !important;
+        background: $Neutral-1 !important;
+    }
+}
+
+
+.menu__list {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 25px;
+
+    & .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        & .menu__cover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        & .menu__details {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 20px;
+            background: $Neutral-1;
+
+            & .menu__title {
+                font-family: $FontMedium;
+                font-size: 1.2rem;
+                color: white;
+            }
+
+            & .menu__description {
+                color: white;
+            }
+
+            & .menu__price {
+                font-family: $FontMedium;
+                font-size: 1.2rem;
+                color: white;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+   .menu__list {
+    grid-template-columns: repeat(1, 1fr);
+    & .menu{
+        & .menu__cover{
+            order: 1;
+        }
+        & .menu__details{
+            order: 5;
+        }
+    }
+    }
+}
+@media only screen and (max-width: 565px) {
+   .category-menu {
+    grid-template-columns: repeat(2, 1fr);
+    & .menu-type{
+        text-align: center;
+    }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+   .menu__list {
+    & .menu {
+        grid-template-columns: repeat(1, 1fr);}
+    }
+}
+
+@media only screen and (max-width: 325px) {
+   .category-menu {
+    grid-template-columns: repeat(1, 1fr);
+    }
+}

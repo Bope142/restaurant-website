@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Oswald-Bold';
+    src: url('../fonts/Oswald-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald-Medium';
+    src: url('../fonts/Oswald-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../fonts/Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald-Light';
+    src: url('../fonts/Oswald-Light.ttf');
+}
+
+/* color variable */
+
+$Neutral-1:#F05922;
+$Neutral-2:#099339;
+$Neutral-3:#BD1624;
+$Neutral-4:#0C0C0C;
+$Neutral-5:#1A1E1D;
+$Neutral-6:#FFFFFF;
+
+/* font face */
+$FontBold :'Oswald-Bold',
+sans-serif;
+$FontMedium :'Oswald-Medium',
+sans-serif;
+$FontRegular :'Oswald-Regular',
+sans-serif;
+$FontLight :'Oswald-Light',
+sans-serif;
+
+$PADDING:100px;

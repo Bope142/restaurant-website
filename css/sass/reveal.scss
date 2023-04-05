@@ -1,0 +1,10 @@
+.reveal {
+    opacity: 0 !important;
+    transform: scale3d(0, 0, 0) !important;
+}
+
+.reveal__visible {
+    opacity: 1.0 !important;
+    transform: scale3d(1.0, 1.0, 1.0) !important;
+    transition: all 0.8s linear !important;
+}

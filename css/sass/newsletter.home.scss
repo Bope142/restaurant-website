@@ -1,0 +1,64 @@
+#newsletter-section {
+    background: url("../images/newsletter-bg.jpg") center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    & h3 {
+        font-family: $FontBold;
+        color: white;
+        font-size: 2.5rem;
+        text-align: left;
+        z-index: 50;
+    }
+
+    & form {
+        display: flex;
+        column-gap: 15px;
+        width: 40%;
+        z-index: 50;
+
+        & input {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: "";
+        background: linear-gradient(to bottom, rgba($Neutral-5, 0.4), rgba($Neutral-5, 0.7));
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    #newsletter-section {
+        flex-direction: column;
+
+        & h3 {
+            text-align: center;
+        }
+
+        & form {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #newsletter-section {
+
+        & form {
+            flex-direction: column;
+            grid-row-gap: 20px;
+        }
+    }
+}

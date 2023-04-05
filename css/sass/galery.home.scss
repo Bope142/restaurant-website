@@ -1,0 +1,28 @@
+#galery-section {
+    & .section_content {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 30px;
+
+        & .content-galery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+        }
+
+        & .btn {
+            align-self: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    #galery-section {
+        & .section_content {
+            & .content-galery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

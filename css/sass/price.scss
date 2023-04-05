@@ -1,0 +1,74 @@
+@import './main.scss';
+@import './header.scss';
+@import './footer.scss';
+#banner-section{
+  background: url("../images/bg-page (1).jpg") center/cover fixed;
+}
+
+#pricing-section{
+  display: grid ;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 35px;
+}
+
+
+.card__price{
+  display: flex;
+  flex-direction: column;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  & .price__value{
+    flex: none;
+    padding: 13px;
+    background: $Neutral-1;
+    color: white;
+    font-family: $FontBold;
+    text-align: center;
+    font-size: 1.3rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  & .option__cards{
+    padding: 20px;
+    text-align: center;
+    font-family: $FontRegular;
+    font-size: 1rem;
+    color: $Neutral-4;
+    opacity: 0.8;
+    flex: none;
+    border-bottom: 1px solid rgba($Neutral-1,0.3);
+  }
+  & .buy__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row-gap: 30px;
+    padding: 35px;
+    flex: none;
+    & p{
+      font-family: $FontRegular;
+      color: $Neutral-4;
+      opacity: 0.8;
+      font-size: 1rem;
+      text-align: center;
+    }
+    & .btn{
+      box-shadow: 0 0 0 0.3rem rgba($Neutral-1, 0.4);
+    }
+  }
+}
+
+@media only screen and (max-width: 1330px) {
+    #pricing-section{
+          grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 960px) {
+    #pricing-section{
+          grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 600px) {
+    #pricing-section{
+          grid-template-columns: repeat(1, 1fr);
+    }
+}

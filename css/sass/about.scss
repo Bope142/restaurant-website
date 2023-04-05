@@ -1,0 +1,18 @@
+@import './main.scss';
+@import './header.scss';
+@import './galery.home.scss';
+@import './state.home.scss';
+@import './footer.scss';
+@import './about.home.scss';
+#banner-section{
+  background: url("../images/bg-page (1).jpg") center/cover fixed;
+}
+#stats-section{
+  background: white !important;
+  &::after{
+    display: none !important;
+  }
+  & *{
+    color: $Neutral-1 !important;
+  }
+}

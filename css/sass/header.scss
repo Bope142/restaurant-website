@@ -1,0 +1,278 @@
+.container__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 500;
+    transition: all 0.3s linear;
+
+    & #booking-btn {
+        margin-right: $PADDING;
+    }
+}
+
+.header-bg-visible {
+    background: rgba(255, 255, 255, 1.0) !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+
+    & .header__logo {
+        & svg .path-1 {
+            fill: $Neutral-4 !important;
+        }
+
+        & .name-website {
+            color: $Neutral-4 !important;
+
+        }
+    }
+
+    & .header__nav {
+
+        & .nav__link {
+            color: $Neutral-4 !important;
+        }
+
+        & .nav__link-active {
+            color: $Neutral-1 !important;
+        }
+    }
+
+}
+
+.header__logo {
+    margin-left: $PADDING;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    flex: none;
+
+    & svg {
+        height: 3rem;
+        width: 3rem;
+        flex: none;
+        align-self: center;
+
+        & .path-1 {
+            fill: white !important;
+        }
+    }
+
+    & .name-website {
+        font-family: $FontBold;
+        font-size: 1.4rem;
+        color: white;
+        align-self: center;
+
+        & span {
+            color: $Neutral-1;
+        }
+    }
+}
+
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    align-self: center;
+
+    & .nav__link {
+        align-self: center;
+        font-family: $FontRegular;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+    & .nav__link-active {
+        color: $Neutral-1 !important;
+    }
+
+}
+
+
+.menu-mobile-btn {
+    --front: #F05922;
+    --back: #0C0C0C;
+    --icon: white;
+    perspective: 600px;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: none;
+    input {
+        display: none;
+        & + div {
+            span {
+                --rotateY: 0deg;
+                --background: var(--front);
+                transform: rotateY(var(--rotateY));
+                transform-style: preserve-3d;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: var(--background);
+                backface-visibility: hidden;
+                transition: transform .6s cubic-bezier(.2, .64, .48, 1.24);
+                &:before,
+                &:after {
+                    --rotate: 0deg;
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 2px;
+                    border-radius: 1px;
+                    top: 50%;
+                    left: 50%;
+                    background: var(--icon);
+                    backface-visibility: hidden;
+                    transform: translate(-50%, -50%) rotate(var(--rotate)) translateZ(6px);
+                }
+                &:first-child {
+                    --background: var(--back);
+                    &:before {
+                        --rotate: -45deg;
+                    }
+                    &:after {
+                        --rotate: 45deg;
+                    }
+                }
+                &:last-child {
+                    --rotateY: 180deg;
+                    &:before {
+                        box-shadow: 0 -5px 0 var(--icon), 0 5px 0 var(--icon);
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &:checked + div {
+            span {
+                &:first-child {
+                    --rotateY: -180deg;
+                }
+                &:last-child {
+                    --rotateY: 0deg;
+                }
+            }
+        }
+    }
+}
+
+
+.menu-mobile-active {
+    height: 480px !important;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+.menu-mobile {
+    position: fixed;
+    background: $Neutral-4;
+    z-index: 500;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    transition: all 0.2s linear;
+    height: 0;
+    overflow: hidden;
+
+    & .nav__item-select {
+        background: rgba(255, 255, 255, 0.02) !important;
+        transition: all 0.2s linear;
+
+        &::after {
+            background: $Neutral-1 !important;
+            transition: all 0.2s linear;
+        }
+    }
+    & .btn{
+        align-self: flex-start !important;
+        margin: 20px;
+    }
+    & .nav__items {
+        padding: 20px;
+         font-family: $FontRegular;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s linear;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            top: 0;
+            height: 100%;
+            background: transparent;
+            width: 5px;
+            transition: all 0.2s linear;
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    $PADDING: 50px;
+
+    .container__header {
+        & #booking-btn {
+            margin-right: $PADDING !important;
+        }
+
+        & .header__logo {
+            margin-left: $PADDING !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+    $PADDING: 20px;
+
+    .container__header {
+        & #booking-btn {
+            margin-right: $PADDING !important;
+        }
+
+        & .header__logo {
+            margin-left: $PADDING !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+    $PADDING: 20px;
+
+    .container__header {
+        & #booking-btn {
+            display: none  !important;
+        }
+
+        & .header__nav {
+            display: none !important;
+        }
+        & .menu-mobile-btn{
+            margin-right: $PADDING !important;
+            display: flex;
+        }
+    }
+
+}
