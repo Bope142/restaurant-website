@@ -112,6 +112,17 @@ li {
 }
 /* color variable */
 /* font face */
+.reveal {
+  opacity: 0 !important;
+  transform: scale3d(0, 0, 0) !important;
+}
+
+.reveal__visible {
+  opacity: 1 !important;
+  transform: scale3d(1, 1, 1) !important;
+  transition: all 0.8s linear !important;
+}
+
 html {
   scroll-behavior: smooth;
   user-select: none;
@@ -330,14 +341,53 @@ body::-webkit-scrollbar {
   text-shadow: 2px 2px 2px black;
 }
 
+.btn-scroll-top {
+  position: fixed;
+  bottom: 15%;
+  right: 100px;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem !important;
+  padding: 10px !important;
+  -webkit-animation: pulse1 2s infinite;
+  animation: pulse1 2s infinite;
+  transition: all 0.3s linear;
+  opacity: 0;
+  z-index: 858;
+}
+
+@-webkit-keyframes pulse1 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 89, 34, 0.9);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(240, 89, 34, 0);
+  }
+}
+@keyframes pulse1 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 89, 34, 0.9);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(216, 244, 12, 0);
+  }
+}
 @media only screen and (max-width: 1200px) {
   .container__section {
     padding: 50px;
+  }
+
+  .btn-scroll-top {
+    right: 50px;
   }
 }
 @media only screen and (max-width: 1100px) {
   .container__section {
     padding: 50px 20px;
+  }
+
+  .btn-scroll-top {
+    right: 20px;
   }
 }
 .container__header {
@@ -483,7 +533,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-mobile-active {
-  height: 540px !important;
+  height: 480px !important;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -751,9 +801,9 @@ body::-webkit-scrollbar {
   text-align: center;
   border-top: 1px solid white;
   font-family: "Oswald-Light", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: white;
-  opacity: 0.7;
+  opacity: 0.2;
   padding-top: 25px;
 }
 

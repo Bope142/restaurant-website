@@ -3,5 +3,9 @@
 *.sass.map
 *.scss.map
 icons
-*svg
+*.svg
 css/sass/dart-sass
+node_modules
+.parcel-cache
+*.json
+

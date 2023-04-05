@@ -112,6 +112,17 @@ li {
 }
 /* color variable */
 /* font face */
+.reveal {
+  opacity: 0 !important;
+  transform: scale3d(0, 0, 0) !important;
+}
+
+.reveal__visible {
+  opacity: 1 !important;
+  transform: scale3d(1, 1, 1) !important;
+  transition: all 0.8s linear !important;
+}
+
 html {
   scroll-behavior: smooth;
   user-select: none;
@@ -302,14 +313,82 @@ body::-webkit-scrollbar {
   width: 100vw;
 }
 
+.banner-page {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 600px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex: none !important;
+}
+.banner-page::after {
+  content: "";
+  background: linear-gradient(to bottom, rgba(240, 89, 34, 0.5), rgba(0, 0, 0, 0.98));
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.banner-page .page__title {
+  color: white;
+  font-family: "Oswald-Bold", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 50;
+  text-shadow: 2px 2px 2px black;
+}
+
+.btn-scroll-top {
+  position: fixed;
+  bottom: 15%;
+  right: 100px;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem !important;
+  padding: 10px !important;
+  -webkit-animation: pulse1 2s infinite;
+  animation: pulse1 2s infinite;
+  transition: all 0.3s linear;
+  opacity: 0;
+  z-index: 858;
+}
+
+@-webkit-keyframes pulse1 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 89, 34, 0.9);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(240, 89, 34, 0);
+  }
+}
+@keyframes pulse1 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 89, 34, 0.9);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(216, 244, 12, 0);
+  }
+}
 @media only screen and (max-width: 1200px) {
   .container__section {
     padding: 50px;
+  }
+
+  .btn-scroll-top {
+    right: 50px;
   }
 }
 @media only screen and (max-width: 1100px) {
   .container__section {
     padding: 50px 20px;
+  }
+
+  .btn-scroll-top {
+    right: 20px;
   }
 }
 .container__header {
@@ -455,7 +534,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-mobile-active {
-  height: 540px !important;
+  height: 480px !important;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -646,6 +725,7 @@ body::-webkit-scrollbar {
   width: 400px;
   align-self: center;
   margin-left: auto;
+  z-index: 25;
 }
 #recipe-section .section_content .box-details-recipe .details {
   padding: 25px;
@@ -673,6 +753,7 @@ body::-webkit-scrollbar {
   height: 390px;
   width: 50%;
   margin-left: auto;
+  z-index: 12;
 }
 #recipe-section .section_content .cover-recipe-day img {
   height: 100%;
@@ -908,9 +989,9 @@ body::-webkit-scrollbar {
   text-align: center;
   border-top: 1px solid white;
   font-family: "Oswald-Light", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: white;
-  opacity: 0.7;
+  opacity: 0.2;
   padding-top: 25px;
 }
 
@@ -926,31 +1007,6 @@ body::-webkit-scrollbar {
 }
 #banner-section {
   background: url("../images/bg-page (1).jpg") center/cover fixed;
-  position: relative;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-#banner-section::after {
-  content: "";
-  background: linear-gradient(to bottom, rgba(26, 30, 29, 0.7), rgba(0, 0, 0, 0.98));
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-#banner-section .page__title {
-  color: white;
-  font-family: "Oswald-Bold", sans-serif;
-  font-size: 4rem;
-  text-align: center;
-  z-index: 50;
-  text-shadow: 2px 2px 2px black;
 }
 
 /*# sourceMappingURL=menu.css.map */

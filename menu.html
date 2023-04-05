@@ -5,19 +5,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Author: Norbert Yemuang Bope">
-        <title>Menu Restaurant Website | By Norbert Yemuang</title>
+        <title>Restaurant Website Template | By Norbert Yemuang</title>
         <link rel="stylesheet" href="./css/menu.css">
     </head>
 
     <body>
-       <div class="loader-page">
+        <div class="loader-page">
             <img src="./images/loader.gif" alt="">
         </div>
-       <main class="container">
+        <main class="container">
             <!-- header section page -->
             <header class="container__header">
                 <div class="header__logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="reveal">
                         <path class="path-1" fill="white" d="M19,18.3l-2.8,2.8l18.4,18.4c0.8,0.8,2,0.8,2.8,0l0,0c0.8-0.8,0.8-2,0-2.8L19,18.3z" />
                         <path class="path-1" fill="white" d="M15.9,26.5l5.7-5.7L7.7,7L7.1,7.5c-2.8,2.8-2.8,7.4,0,10.2L15.9,26.5z" />
                         <g>
@@ -25,19 +25,18 @@
                             <path fill="#F05922" d="M33.9 6.100000000000001A8 10 0 1 0 33.9 26.1A8 10 0 1 0 33.9 6.100000000000001Z" transform="rotate(45.001 33.945 16.055)" />
                         </g>
                     </svg>
-                    <span class="name-website">Kinshasa.<span>Foods</span></span>
+                    <span class="name-website reveal">Kinshasa.<span>Foods</span></span>
                 </div>
-                <nav class="header__nav">
-                    <a href="index.html" class="nav__link ">HOME</a>
-                    <a href="about.html" class="nav__link ">ABOUT</a>
+                <nav class="header__nav reveal">
+                    <a href="index.html" class="nav__link">HOME</a>
+                    <a href="about.html" class="nav__link">ABOUT</a>
                     <a href="#" class="nav__link nav__link-active">MENU</a>
-                    <a href="" class="nav__link">RESERVATION</a>
-                    <a href="" class="nav__link">BLOG</a>
-                    <a href="" class="nav__link">PRICING</a>
-                    <a href="" class="nav__link">CONTACT</a>
+                    <a href="reservation.html" class="nav__link">RESERVATION</a>
+                    <a href="chef.html" class="nav__link">CHEF</a>
+                    <a href="price.html" class="nav__link">PRICING</a>
                 </nav>
-                <button class="btn btn-round" id="booking-btn">BOOKING NOW</button>
-                <label class="menu-mobile-btn">
+                <button class="btn btn-round reveal" id="booking-btn">BOOKING NOW</button>
+                <label class="menu-mobile-btn reveal">
                     <input id="mobile-checkbox" type="checkbox" checked>
                     <div>
                         <span></span>
@@ -47,33 +46,32 @@
             </header>
             <!--        menu mobile-->
             <nav class="menu-mobile ">
-                <a href="index.html" class="nav__items">HOME</a>
-                <a href="about.html" class="nav__items">ABOUT</a>
-                <a href="#" class="nav__items nav__item-select">MENU</a>
-                <a href="#profession-section" class="nav__items">RESERVATION</a>
-                <a href="#services-section" class="nav__items">BLOG</a>
-                <a href="#project-section" class="nav__items">PRICING</a>
-                <a href="#contcat-section" class="nav__items">CONTACT</a>
-                <button class="btn btn-round" id="booking-btn">BOOKING NOW</button>
+                <a href="index.html" class="nav__items reveal">HOME</a>
+                <a href="about.html" class="nav__items reveal">ABOUT</a>
+                <a href="#" class="nav__items reveal nav__item-select">MENU</a>
+                <a href="reservation.html" class="nav__items reveal">RESERVATION</a>
+                <a href="chef.html" class="nav__items reveal">CHEF</a>
+                <a href="price.html" class="nav__items reveal">PRICING</a>
+                <button class="btn btn-round" id="booking-btn reveal">BOOKING NOW</button>
             </nav>
             <!-- banner section page -->
-            <section class="container__section" id="banner-section">
-              <span class="page__title">MENU</span>
+            <section class="container__section banner-page" id="banner-section">
+                <span class="page__title reveal">MENU</span>
             </section>
-             <!-- menu section -->
+            <!-- menu section -->
             <section class="container__section" id="menu-section">
                 <div class="setion__title_content">
-                    <span class="section__tilte">OUR SPECIAL MENU</span>
+                    <span class="section__tilte reveal">OUR SPECIAL MENU</span>
                 </div>
                 <div class="section_content">
-                    <div class="category-menu">
+                    <div class="category-menu reveal">
                         <div class="menu-type menu-select">Breakfast</div>
                         <div class="menu-type">Lunch</div>
                         <div class="menu-type">Dinner</div>
                         <div class="menu-type">FastFood</div>
                     </div>
                     <div class="menu__list">
-                        <div class="menu">
+                        <div class="menu reveal">
                             <div class="menu__cover">
                                 <img src="./images/foods/menu-1.jpg" alt="">
                             </div>
@@ -85,7 +83,7 @@
                                 <span class="menu__price">25 $</span>
                             </div>
                         </div>
-                        <div class="menu">
+                        <div class="menu reveal">
                             <div class="menu__cover">
                                 <img src="./images/foods/menu-2.jpg" alt="">
                             </div>
@@ -97,7 +95,7 @@
                                 <span class="menu__price">25 $</span>
                             </div>
                         </div>
-                        <div class="menu">
+                        <div class="menu reveal">
                             <div class="menu__details">
                                 <span class="menu__title">Belgian Wafle corn patter</span>
                                 <p class="menu__description">
@@ -109,7 +107,7 @@
                                 <img src="./images/foods/menu-3.jpg" alt="">
                             </div>
                         </div>
-                        <div class="menu">
+                        <div class="menu reveal">
                             <div class="menu__details">
                                 <span class="menu__title">Belgian Wafle corn patter</span>
                                 <p class="menu__description">
@@ -124,35 +122,35 @@
                     </div>
                 </div>
             </section>
-              <!-- recipe days -->
+            <!-- recipe days -->
             <section class="container__section" id="recipe-section">
                 <div class="setion__title_content">
-                    <span class="section__tilte">RECIPE OF THE DAY</span>
-                    <p class="detail_title_section">
+                    <span class="section__tilte reveal">RECIPE OF THE DAY</span>
+                    <p class="detail_title_section reveal">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis praesentium voluptatum in sed nulla a repudiandae est ducimus possimus atque reprehenderit inventore quis neque laudantium perspiciatis, odit minus. Eos, voluptatibus?
                     </p>
                 </div>
                 <div class="section_content">
                     <div class="box-details-recipe">
                         <div class="details">
-                            <span class="title-recipe">PAD THAI</span>
-                            <p class="text">Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Odio exercitationem id, modi perspiciatis. Porro dicta delectus repudiandae. Quam sapiente dolorem cum? Perspiciatis et, ipsa ex eaque atque tempore, iusto dolor.</p>
-                            <button class="btn btn-round no-bg-btn">ORDER NOW</button>
+                            <span class="title-recipe reveal">PAD THAI</span>
+                            <p class="text reveal">Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Odio exercitationem id, modi perspiciatis. Porro dicta delectus repudiandae. Quam sapiente dolorem cum? Perspiciatis et, ipsa ex eaque atque tempore, iusto dolor.</p>
+                            <button class="btn btn-round no-bg-btn reveal">ORDER NOW</button>
                         </div>
                     </div>
-                    <div class="cover-recipe-day">
+                    <div class="cover-recipe-day reveal">
                         <img src="./images/foods/special-menu-2.jpg" alt="">
                     </div>
                 </div>
             </section>
-             <!-- testimonials -->
+            <!-- testimonials -->
             <section class="container__section" id="testimonials-section">
                 <div class="setion__title_content">
-                    <span class="section__tilte">TESTIMONIALS</span>
+                    <span class="section__tilte reveal">TESTIMONIALS</span>
                 </div>
                 <div class="section_content">
                     <section class="content__testimonials">
-                        <div class="testimonial">
+                        <div class="testimonial reveal">
                             <div class="testimonial__user">
                                 <div class="user__cover">
                                     <img src="./images/users/pic-1.png" alt="">
@@ -183,7 +181,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial">
+                        <div class="testimonial reveal">
                             <div class="testimonial__user">
                                 <div class="user__cover">
                                     <img src="./images/users/pic-1.png" alt="">
@@ -214,7 +212,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial">
+                        <div class="testimonial reveal">
                             <div class="testimonial__user">
                                 <div class="user__cover">
                                     <img src="./images/users/pic-1.png" alt="">
@@ -246,7 +244,7 @@
                             </div>
                         </div>
                     </section>
-                    <div class="controll-slide">
+                    <div class="controll-slide reveal">
                         <button class="btn-slide-controll right-slide">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                                 <path d="M15.460938 5.984375 A 1.50015 1.50015 0 0 0 14.455078 8.5761719L30.345703 24L14.455078 39.423828 A 1.50015 1.50015 0 1 0 16.544922 41.576172L33.544922 25.076172 A 1.50015 1.50015 0 0 0 33.544922 22.923828L16.544922 6.4238281 A 1.50015 1.50015 0 0 0 15.460938 5.984375 z" fill="#FFFFFF" />
@@ -263,7 +261,7 @@
             <!-- footer -->
             <footer class="container__footer container__section">
                 <div class="footer__content">
-                    <div class="box-footer">
+                    <div class="box-footer reveal">
                         <div class="footer__logo">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                                 <path class="path-1" fill="white" d="M19,18.3l-2.8,2.8l18.4,18.4c0.8,0.8,2,0.8,2.8,0l0,0c0.8-0.8,0.8-2,0-2.8L19,18.3z" />
@@ -302,8 +300,8 @@
                         </div>
                     </div>
                     <div class="content">
-                        <span class="title__content">Our Menu</span>
-                        <ul class="content_child">
+                        <span class="title__content reveal">Our Menu</span>
+                        <ul class="content_child reveal">
                             <a href="">Home</a>
                             <a href="">About Us</a>
                             <a href="">Our Service</a>
@@ -313,8 +311,8 @@
                         </ul>
                     </div>
                     <div class="content">
-                        <span class="title__content">Visit Us</span>
-                        <ul class="content_child">
+                        <span class="title__content reveal">Visit Us</span>
+                        <ul class="content_child reveal">
                             <div class="contact">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                                     <path d="M22.916,6.625l1.719,4.055c0.749,1.767,0.334,3.845-1.028,5.137l-3.212,3.048c-0.362,0.344-0.55,0.843-0.469,1.335c0.31,1.881,0.997,3.736,2.061,5.566c1.062,1.826,2.355,3.38,3.88,4.661c0.404,0.339,0.965,0.427,1.465,0.26l3.747-1.25c1.725-0.575,3.603,0.086,4.661,1.64l2.465,3.621c1.23,1.807,1.009,4.299-0.517,5.831l-1.636,1.642c-1.628,1.634-3.953,2.227-6.104,1.556c-5.078-1.584-9.746-6.286-14.006-14.107c-4.266-7.832-5.771-14.478-4.516-19.936c0.528-2.297,2.163-4.126,4.298-4.808l2.153-0.688C19.897,3.545,22.052,4.587,22.916,6.625z" fill="#FFFFFF" />
@@ -345,8 +343,8 @@
                         </ul>
                     </div>
                     <div class="content">
-                        <span class="title__content">Photo</span>
-                        <ul class="content_child photo-galery">
+                        <span class="title__content reveal">Photo</span>
+                        <ul class="content_child photo-galery reveal">
                             <div><img src="./images/foods/menu-3.jpg" alt=""></div>
                             <div><img src="./images/foods/menu-4.jpg" alt=""></div>
                             <div><img src="./images/foods/menu-5.jpg" alt=""></div>
@@ -356,12 +354,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="copy">
+                <div class="copy reveal">
                     Kinshasa.Foods Copyright (c) 2023. Designed By Norbert Yemuang
                 </div>
             </footer>
+            <a href="#" class="btn btn-icons btn-scroll-top" id="btn-scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                    <path d="M24,46c1.104,0,2-0.896,2-2V8.659l6.623,6.291c0.387,0.367,0.882,0.55,1.377,0.55c0.529,0,1.057-0.209,1.451-0.622 c0.761-0.801,0.728-2.067-0.073-2.828l-10-9.5c-0.771-0.732-1.983-0.732-2.755,0l-10,9.5c-0.801,0.761-0.833,2.027-0.073,2.828 c0.761,0.799,2.027,0.832,2.828,0.072L22,8.659V44C22,45.104,22.896,46,24,46z" fill="#FFFFFF" />
+                </svg></a>
         </main>
-         <script src="./js/about.js"></script>
+        <script src="./js/reveal.js"></script>
+        <script src="./js/about.js"></script>
     </body>
 
 </html>
