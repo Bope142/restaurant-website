@@ -8,4 +8,4 @@ css/sass/dart-sass
 node_modules
 .parcel-cache
 *.json
-
+dist
